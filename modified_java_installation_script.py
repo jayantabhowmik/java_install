@@ -15,10 +15,7 @@ def install_java():
         return
 
     system = platform.system()
-    if system == 'Windows':
-        print("Detected Windows OS.")
-        install_command = 'choco install adoptopenjdk11 -y'  # Assuming you have Chocolatey installed for Windows
-    elif system == 'Linux':
+    if system == 'Linux':
         print("Detected Linux OS.")
         dist = platform.release()
         if 'ubuntu' in dist.lower() or 'debian' in dist.lower():
@@ -33,7 +30,7 @@ def install_java():
         install_command = '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install adoptopenjdk11'
         # Install Homebrew for macOS if not already installed and then install adoptopenjdk
     else:
-        print("Unsupported operating system.")
+        print("Java installation for Windows is not supported.")
         return
 
     try:
@@ -45,4 +42,3 @@ def install_java():
 
 if __name__ == "__main__":
     install_java()
-
