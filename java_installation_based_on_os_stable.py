@@ -36,7 +36,7 @@ def install_java():
                 install_command = 'sudo dnf install java-11-openjdk.x86_64 -y'
             elif os_id == 'centos':
                 install_command = 'sudo yum install java-11-openjdk.x86_64 -y'
-            elif os_id == 'amazon':
+            elif os_id == 'amzn':
                 install_command = 'sudo yum install java-11-amazon-corretto.x86_64 -y'
             else:
                 print("Unsupported Linux distribution.")
